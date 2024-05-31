@@ -1,0 +1,138 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* General Styling */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.6rem;
+  color: hsl(292, 16%, 49%);
+  background: url("assets/images/background-pattern-desktop.svg") top no-repeat,
+    linear-gradient(to top, hsl(275, 100%, 97%) 50%, hsl(275, 100%, 97%) 50%);
+}
+/* MAIN DESIGN */
+
+.head {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: 3.8rem;
+  font-weight: 600;
+  color: hsl(292, 42%, 14%);
+}
+
+.accordion {
+  margin: 3rem;
+  border-radius: 1.6rem;
+  width: 54rem;
+  padding: 2.8rem 3.5rem;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.question {
+  cursor: pointer;
+  color: hsl(292, 42%, 14%);
+  font-weight: 700;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 0;
+  transition: all 0.3s;
+}
+
+.question:hover,
+.question:active {
+  color: #ad28eb;
+}
+
+.faqs {
+  border-bottom: 1.5px solid hsl(275, 100%, 97%);
+}
+
+.faqs:last-child {
+  border-bottom: none;
+}
+
+.answer {
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+  transition: all 0.3s;
+}
+
+.faqs:last-child .answer {
+  margin-bottom: 0;
+}
+
+/* JS STUFF */
+
+.minus {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
